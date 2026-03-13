@@ -15,7 +15,7 @@
 </head>
 <body>
   <main class="page">
-    <section class="hero fi">
+    <section class="hero fi v">
       <div class="hero-grid">
         <figure class="hero-figure gold">
           <img alt="골드쉽" src="goru-portrait.webp"/>
@@ -175,13 +175,49 @@
 
   <footer class="footer"><span class="ico">🚓</span>이 페이지는 고루메노 관계성 아카이브로 제작되었습니다.<br/>모든 캐릭터와 작품은 © Cygames, Inc. 에 귀속됩니다.<br/><span class="en" style="font-size:10px; letter-spacing:0.06em; opacity:0.6;">Made by <a href="https://jhakentertainment.com" rel="noopener" style="color:inherit; text-decoration:underline;" target="_blank">JHAK Entertainment Inc.</a></span></footer>
 <script>
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('v');
-  });
-}, { threshold: 0.12 });
+(function () {
+  const items = Array.from(document.querySelectorAll('.fi'));
+  if (!items.length) return;
 
-document.querySelectorAll('.fi').forEach((el) => fadeObserver.observe(el));
+  const root = document.documentElement;
+  root.classList.add('motion-ready');
+
+  const hero = document.querySelector('.hero.fi');
+  if (hero) hero.classList.add('v');
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach((el) => el.classList.add('v'));
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    items.forEach((el) => el.classList.add('v'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('v');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -6% 0px'
+  });
+
+  items.forEach((el) => {
+    if (el === hero) return;
+    observer.observe(el);
+  });
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      items.forEach((el) => el.classList.add('v'));
+    }, 1200);
+  }, { once: true });
+})();
 </script>
 </body>
 </html>
