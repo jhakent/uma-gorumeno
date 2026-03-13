@@ -411,14 +411,16 @@ img { display: block; max-width: 100%; }
 .fenomeno-quote .quote-sfx.top {
   font-size: 15px;
   justify-self: start;
+  font-style: italic;
 }
 
 .fenomeno-quote .quote-sfx.bottom {
   font-size: 14px;
   justify-self: end;
+  font-style: italic;
 }
 
-/* 하루텐: 기본은 세로, PC에서만 2단 */
+/* 하루텐: PC에서만 2단 */
 .haruten-spotlight {
   margin-top: 16px;
   padding: 26px;
