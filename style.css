@@ -584,6 +584,7 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 768px) {
+  .side-nav { display: none !important; }
   .core-read-grid { grid-template-columns:1fr; }
   .onecut-card { padding:16px 16px 14px; border-radius:24px; }
   .onecut-title { font-size:20px; }
@@ -594,11 +595,6 @@ img { display: block; max-width: 100%; }
   .fenomeno-quote .quote-sfx.bottom { font-size:12px; }
   .core-onecut-block { margin-top:16px; }
   .haruten-spotlight { padding:18px; }
-  .side-nav { display:none; }
-}
-
-@media (max-width: 760px) {
-  .side-nav { display: none; }
   .grid-4 { grid-template-columns:1fr; }
   .compare-block { padding:24px; }
   .compare-head h3 { font-size:28px; line-height:1.15; }
