@@ -347,9 +347,12 @@ img { display: block; max-width: 100%; }
 
 .onecut-card {
   padding: 22px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(87,74,119,0.10);
   border-radius: 28px;
-  background: rgba(255,255,255,0.78);
+  background:
+    radial-gradient(circle at 14% 16%, rgba(87,74,119,0.045), transparent 26%),
+    radial-gradient(circle at 86% 14%, rgba(234,220,104,0.05), transparent 22%),
+    linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,252,255,0.92));
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
   max-width: 960px;
