@@ -91,8 +91,11 @@
           <div class="onecut-kicker">official 1cut</div>
           <h3 class="onecut-title">정의의 추격</h3>
           <div class="onecut-media"><img alt="페노메노 공식 1컷 만화 정의의 추격" src="meno-onecut.jpg"/></div>
-          <div class="onecut-quote fenomeno-quote"><div class="quote-sfx top">(부릅!)</div><p class="quote-main"> <p class="quote-main">
-“매번매번 규칙을 벗어나기나 하고… <br class="mobile-break">오늘은 반드시 잡고야 말겠습니다!!”</p><div class="quote-sfx bottom">(다다다다다다다)</div></div>
+          <div class="onecut-quote fenomeno-quote">
+            <div class="quote-sfx top">(부릅!)</div>
+            <p class="quote-main">“매번매번 규칙을 벗어나기나 하고… <br class="mobile-break">오늘은 반드시 잡고야 말겠습니다!!”</p>
+            <div class="quote-sfx bottom">(다다다다다다다)</div>
+          </div>
         </article>
       </div>
     </section>
@@ -144,21 +147,6 @@
       </div>
     </section>
 
-    <section class="section fi" id="topic05">
-      <div class="section-head">
-        <div class="section-no">05</div>
-        <div class="section-kicker">why it works</div>
-        <h2 class="section-title"><span class="keep">이들의 케미는</span><span class="mobile-break"><span class="keep">어디서 오는가</span></span></h2>
-        <p class="section-lead">고루메노의 맛은 한쪽이 먼저 걸고, 다른 한쪽이 끝까지 받아치는 데서 나온다. 개그 콤비처럼 웃기면서도, 어느 순간 라이벌 감정이 진하게 남는 이유가 여기에 있다.</p>
-      </div>
-      <div class="reason-grid">
-        <article class="card reason-card"> <h3>보케와 츳코미의 정석</h3> <p>골드 쉽이 먼저 긁고, 페노메노가 가장 크게 받아친다. 얼핏 반복되는 패턴임에도 늘 새롭게 웃음을 자아낸다. 리듬이 분명하고, 반응이 매번 다르기 때문이다.</p> </article>
-        <article class="card reason-card"> <h3>호칭 차이가 만드는 거리감</h3> <p>‘마메찡’과 ‘고루시 상’. 한쪽은 거리낌이 없고, 한쪽은 끝까지 선을 지킨다. 이 호칭 차이 하나만으로도 둘 사이의 온도 차와 긴장감이 또렷해진다.</p> </article>
-        <article class="card reason-card"> <h3>개그와 라이벌 서사의 동거</h3> <p>웃긴 장면이 먼저 눈에 들어오지만, 따라가다 보면 경쟁, 의식, 좌절, 성장으로 이어진다. 그래서 이 조합은 순간적인 밈으로 끝나지 않고 서사로 남는다.</p> </article>
-        <article class="card reason-card"> <h3>원본마 역사가 더하는 설득력</h3> <p>인게임만 봐도 재밌지만, 실제 대결 기록까지 알고 보면 훨씬 진하게 읽힌다. 원본마 시절부터 쌓인 긴장감이 둘의 관계를 더 특별하게 만든다.</p> </article>
-      </div>
-    </section>
-
     <section class="section fi" id="topicex">
       <div class="section-head">
         <div class="section-no">EX</div>
@@ -176,73 +164,68 @@
   </main>
   
   <nav class="side-nav" aria-label="섹션 이동">
-  <button class="side-dot on" data-t="intro" aria-label="소개"><span class="side-tip">소개</span></button>
-  <button class="side-dot" data-t="topic01" aria-label="요약"><span class="side-tip">요약</span></button>
-  <button class="side-dot" data-t="topic02" aria-label="대비"><span class="side-tip">대비</span></button>
-  <button class="side-dot" data-t="topic03" aria-label="서사"><span class="side-tip">서사</span></button>
-  <button class="side-dot" data-t="topic04" aria-label="역사"><span class="side-tip">역사</span></button>
-  <button class="side-dot" data-t="topic05" aria-label="케미"><span class="side-tip">케미</span></button>
-  <button class="side-dot" data-t="topicex" aria-label="황금일족"><span class="side-tip">황금일족</span></button>
-</nav>
+    <button class="side-dot on" data-t="intro" aria-label="소개"><span class="side-tip">소개</span></button>
+    <button class="side-dot" data-t="topic01" aria-label="요약"><span class="side-tip">요약</span></button>
+    <button class="side-dot" data-t="topic02" aria-label="대비"><span class="side-tip">대비</span></button>
+    <button class="side-dot" data-t="topic03" aria-label="서사"><span class="side-tip">서사</span></button>
+    <button class="side-dot" data-t="topic04" aria-label="역사"><span class="side-tip">역사</span></button>
+    <button class="side-dot" data-t="topicex" aria-label="황금일족"><span class="side-tip">황금일족</span></button>
+  </nav>
   
   <footer class="footer"><span class="ico">🚓</span>이 페이지는 고루메노 관계성 아카이브로 제작되었습니다.<br/>모든 캐릭터와 작품은 © Cygames, Inc. 에 귀속됩니다.<br/><span class="en" style="font-size:10px; letter-spacing:0.06em; opacity:0.6;">Made by <a href="https://jhakentertainment.com" rel="noopener" style="color:inherit; text-decoration:underline;" target="_blank">JHAK Entertainment Inc.</a></span></footer>
-<script>
-(function () {
-  const items = document.querySelectorAll('.fi');
-  if (!items.length) return;
 
-  if (!('IntersectionObserver' in window)) {
-    items.forEach((el) => el.classList.add('v'));
-    return;
-  }
+  <script>
+  (function () {
+    const items = document.querySelectorAll('.fi');
+    if (!items.length) return;
 
-  const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('v');
-        fadeObserver.unobserve(entry.target);
-      }
+    if (!('IntersectionObserver' in window)) {
+      items.forEach((el) => el.classList.add('v'));
+    } else {
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('v');
+            fadeObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -6% 0px'
+      });
+
+      items.forEach((el) => fadeObserver.observe(el));
+    }
+
+    const navIds = ['intro', 'topic01', 'topic02', 'topic03', 'topic04', 'topicex'];
+    const navDots = document.querySelectorAll('.side-dot');
+
+    navDots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const target = document.getElementById(dot.dataset.t);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -6% 0px'
-  });
 
-  items.forEach((el) => fadeObserver.observe(el));
-})();
-</script>
-<script>
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('v');
-  });
-}, { threshold: 0.12 });
+    function updateSideNav() {
+      let current = navIds[0];
 
-document.querySelectorAll('.fi').forEach((el) => fadeObserver.observe(el));
+      navIds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top < window.innerHeight * 0.45) {
+          current = id;
+        }
+      });
 
-const navIds = ['summary', 'contrast', 'story', 'history', 'chemistry', 'golden-family'];
-const navDots = document.querySelectorAll('.side-dot');
+      navDots.forEach((dot) => {
+        dot.classList.toggle('on', dot.dataset.t === current);
+      });
+    }
 
-navDots.forEach((dot) => {
-  dot.addEventListener('click', () => {
-    const target = document.getElementById(dot.dataset.t);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-
-function updateSideNav() {
-  let current = navIds[0];
-  navIds.forEach((id) => {
-    const el = document.getElementById(id);
-    if (el && el.getBoundingClientRect().top < innerHeight * 0.45) current = id;
-  });
-  navDots.forEach((dot) => {
-    dot.classList.toggle('on', dot.dataset.t === current);
-  });
-}
-
-window.addEventListener('scroll', updateSideNav, { passive: true });
-window.addEventListener('load', updateSideNav);
-</script>
+    window.addEventListener('scroll', updateSideNav, { passive: true });
+    window.addEventListener('load', updateSideNav);
+    updateSideNav();
+  })();
+  </script>
 </body>
 </html>
