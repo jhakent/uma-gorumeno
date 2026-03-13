@@ -346,10 +346,12 @@ img { display: block; max-width: 100%; }
 }
 
 .onecut-card {
-  padding: 20px 20px 18px;
-  border: 1px solid rgba(87,74,119,.16);
+  padding: 22px;
+  border: 1px solid var(--border);
   border-radius: 28px;
-  background: linear-gradient(180deg,rgba(87,74,119,.03),rgba(255,255,255,.9));
+  background: rgba(255,255,255,0.78);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
   max-width: 960px;
   margin-inline: auto;
 }
@@ -357,31 +359,32 @@ img { display: block; max-width: 100%; }
 .onecut-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 12px;
-  letter-spacing: .18em;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #7f7894;
+  color: var(--text-soft);
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .onecut-kicker::before {
   content: "";
-  width: 14px;
-  height: 14px;
+  width: 9px;
+  height: 9px;
   border-radius: 999px;
-  background: rgba(127, 120, 148, 0.22);
+  background: currentColor;
+  opacity: 0.35;
   flex: 0 0 auto;
 }
 
 .onecut-title {
-  font-size: 24px;
-  line-height: 1.18;
+  font-size: 20px;
+  line-height: 1.2;
   font-weight: 800;
-  letter-spacing: -.03em;
-  color: #231f2a;
-  margin: 0 0 14px;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  margin: 0 0 12px;
 }
 
 .onecut-media {
@@ -673,8 +676,26 @@ img { display: block; max-width: 100%; }
 
   .side-nav { display: none !important; }
   .core-read-grid { grid-template-columns:1fr; }
-  .onecut-card { padding:16px 16px 14px; border-radius:24px; }
-  .onecut-title { font-size:20px; }
+  .onecut-card {
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .onecut-kicker {
+    font-size: 10px;
+    gap: 7px;
+    margin-bottom: 7px;
+  }
+
+  .onecut-kicker::before {
+    width: 8px;
+    height: 8px;
+  }
+
+  .onecut-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
   .onecut-media, .fenomeno-quote { max-width:none; }
   .fenomeno-quote { padding:14px 15px; gap:8px; }
   .fenomeno-quote .quote-main { font-size:16px; line-height:1.58; }
