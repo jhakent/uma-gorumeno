@@ -474,7 +474,7 @@ img { display: block; max-width: 100%; }
   display:grid;
   grid-template-columns:110px minmax(0, 1fr);
   gap:16px;
-  align-items:center;
+  align-items:start;
   overflow:hidden;
   padding:18px;
   border-radius:22px;
