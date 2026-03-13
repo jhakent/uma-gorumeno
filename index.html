@@ -7,6 +7,7 @@
   <meta property="og:image" content="haruten.jpeg"/>
   <meta name="twitter:image" content="haruten.jpeg"/>
   <meta name="description" content="골드 쉽과 페노메노의 관계성, 원본마의 대결 역사, 황금일족 맥락까지 함께 읽는 고루메노 관계 아카이브."/>
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%9A%93%3C/text%3E%3C/svg%3E"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -15,22 +16,22 @@
 </head>
 <body>
   <main class="page">
-    <section class="hero fi v">
+    <section class="hero">
       <div class="hero-grid">
-        <figure class="hero-figure gold">
+        <figure class="hero-figure gold hero-load hero-load-1">
           <img alt="골드쉽" src="goru-portrait.webp"/>
         </figure>
         <div class="hero-copy">
-          <span class="kicker"><span class="kicker-dot"></span><span class="en">RELATION ARCHIVE</span></span>
-          <h1 class="hero-title">골드 쉽 × 페노메노</h1>
-          <p class="hero-sub jp">ゴールドシップ × フェノーメノ</p>
-          <p class="hero-sub en-line en">GOLD SHIP × FENOMENO</p>
-          <p class="cp-note"><span>ゴルメノ</span><span class="sep">|</span><span>고루메노</span><span class="sep">|</span><span class="en">Gorumeno</span></p>
-          <p class="hero-desc">어디로 튈지 모르는 괴짜 골드 쉽, 그 장난을 매번 진지하게 받아치는 페노메노. 한쪽은 끝없이 놀리고, 한쪽은 끝없이 뒤쫓는다. 맞붙을 때마다 으르렁대지만, 결국 서로만이 상대를 진정으로 알아보는, 혐관의 교과서.</p>
-          <div class="hero-meta"><span class="pill">경찰과 도둑</span><span class="pill">톰과 제리</span><span class="pill">보케와 츳코미</span></div>
-          <p class="hero-footnote">* 보케와 츳코미: 일본 만담에서 헛소리·폭주를 치는 쪽과, <span class="mobile-only-break"></span>그걸 받아치며 태클 거는 쪽을 가리키는 말.</p>
+          <span class="kicker hero-load hero-load-1"><span class="kicker-dot"></span><span class="en">RELATION ARCHIVE</span></span>
+          <h1 class="hero-title hero-load hero-load-2">골드 쉽 × 페노메노</h1>
+          <p class="hero-sub jp hero-load hero-load-3">ゴールドシップ × フェノーメノ</p>
+          <p class="hero-sub en-line en hero-load hero-load-4">GOLD SHIP × FENOMENO</p>
+          <p class="cp-note hero-load hero-load-5"><span>ゴルメノ</span><span class="sep">|</span><span>고루메노</span><span class="sep">|</span><span class="en">Gorumeno</span></p>
+          <p class="hero-desc hero-load hero-load-6">어디로 튈지 모르는 괴짜 골드 쉽, 그 장난을 매번 진지하게 받아치는 페노메노. 한쪽은 끝없이 놀리고, 한쪽은 끝없이 뒤쫓는다. 맞붙을 때마다 으르렁대지만, 결국 서로만이 상대를 진정으로 알아보는, 혐관의 교과서.</p>
+          <div class="hero-meta hero-load hero-load-7"><span class="pill">경찰과 도둑</span><span class="pill">톰과 제리</span><span class="pill">보케와 츳코미</span></div>
+          <p class="hero-footnote hero-load hero-load-8">* 보케와 츳코미: 일본 만담에서 헛소리·폭주를 치는 쪽과, <span class="mobile-only-break"></span>그걸 받아치며 태클 거는 쪽을 가리키는 말.</p>
         </div>
-        <figure class="hero-figure feno">
+        <figure class="hero-figure feno hero-load hero-load-2">
           <img alt="페노메노" src="meno-portrait.webp"/>
         </figure>
       </div>
@@ -176,30 +177,19 @@
   <footer class="footer"><span class="ico">🚓</span>이 페이지는 고루메노 관계성 아카이브로 제작되었습니다.<br/>모든 캐릭터와 작품은 © Cygames, Inc. 에 귀속됩니다.<br/><span class="en" style="font-size:10px; letter-spacing:0.06em; opacity:0.6;">Made by <a href="https://jhakentertainment.com" rel="noopener" style="color:inherit; text-decoration:underline;" target="_blank">JHAK Entertainment Inc.</a></span></footer>
 <script>
 (function () {
-  const items = Array.from(document.querySelectorAll('.fi'));
+  const items = document.querySelectorAll('.fi');
   if (!items.length) return;
-
-  const root = document.documentElement;
-  root.classList.add('motion-ready');
-
-  const hero = document.querySelector('.hero.fi');
-  if (hero) hero.classList.add('v');
-
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    items.forEach((el) => el.classList.add('v'));
-    return;
-  }
 
   if (!('IntersectionObserver' in window)) {
     items.forEach((el) => el.classList.add('v'));
     return;
   }
 
-  const observer = new IntersectionObserver((entries) => {
+  const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('v');
-        observer.unobserve(entry.target);
+        fadeObserver.unobserve(entry.target);
       }
     });
   }, {
@@ -207,16 +197,7 @@
     rootMargin: '0px 0px -6% 0px'
   });
 
-  items.forEach((el) => {
-    if (el === hero) return;
-    observer.observe(el);
-  });
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      items.forEach((el) => el.classList.add('v'));
-    }, 1200);
-  }, { once: true });
+  items.forEach((el) => fadeObserver.observe(el));
 })();
 </script>
 </body>
