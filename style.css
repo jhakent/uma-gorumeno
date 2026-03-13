@@ -368,7 +368,6 @@ img { display: block; max-width: 100%; }
 .clan-item p { margin-top:8px; font-size:14px; line-height:1.72; color:var(--text-dim); }
 .clan-item .clan-sub { display:inline-block; margin-top:8px; padding:6px 10px; border-radius:999px; background:linear-gradient(135deg, color-mix(in srgb, var(--main) 22%, white), color-mix(in srgb, var(--sub) 46%, white)); color: color-mix(in srgb, var(--main) 96%, black); border:1px solid color-mix(in srgb, var(--main) 26%, white); box-shadow: inset 0 1px 0 rgba(255,255,255,.62), 0 1px 2px rgba(0,0,0,.03); font-size:11px; font-weight:900; letter-spacing:0.01em; }
 .clan-item.staygold .clan-sub { color:#576898; border-color: color-mix(in srgb, #576898 18%, white); }
-.clan-note { margin-top:14px; font-size:13px; color:var(--text-soft); }
 
 .footer { width:min(860px, calc(100% - 64px)); margin:0 auto; text-align:center; padding:40px 0 34px; font-size:11px; color:var(--text-dim); font-weight:300; line-height:1.8; }
 .footer .ico { font-size:20px; display:block; margin-bottom:8px; opacity:0.3; }
@@ -467,9 +466,6 @@ img { display: block; max-width: 100%; }
   .race-tags { justify-content:flex-start; }
 }
 
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -490,5 +486,32 @@ img { display: block; max-width: 100%; }
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+@media (min-width: 901px) {
+  .haruten-spotlight {
+    display: grid;
+    grid-template-columns: minmax(320px, 440px) minmax(0, 1fr);
+    gap: 28px;
+    align-items: center;
+  }
+
+  .haruten-spotlight .haruten-media {
+    width: 100%;
+    max-width: 440px;
+    margin: 0;
+  }
+
+  .haruten-spotlight .haruten-copy {
+    min-width: 0;
+  }
+
+  .haruten-spotlight .haruten-copy h3 {
+    margin-top: 6px;
+  }
+
+  .haruten-spotlight .haruten-copy p {
+    margin-top: 14px;
   }
 }
