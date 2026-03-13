@@ -374,6 +374,33 @@ img { display: block; max-width: 100%; }
 .footer .ico { font-size:20px; display:block; margin-bottom:8px; opacity:0.3; }
 .footer a { color:inherit; text-decoration:underline; }
 
+@media (min-width: 901px) {
+  .haruten-spotlight {
+    display: grid;
+    grid-template-columns: minmax(320px, 440px) minmax(0, 1fr);
+    gap: 28px;
+    align-items: center;
+  }
+
+  .haruten-spotlight .haruten-media {
+    width: 100%;
+    max-width: 440px;
+    margin: 0;
+  }
+
+  .haruten-spotlight .haruten-copy {
+    min-width: 0;
+  }
+
+  .haruten-spotlight .haruten-copy h3 {
+    margin-top: 6px;
+  }
+
+  .haruten-spotlight .haruten-copy p {
+    margin-top: 14px;
+  }
+}
+
 @media (max-width: 980px) {
   .compare-head h3 { font-size:34px; }
   .compare-topic-copy { font-size:17px; font-weight:400; }
@@ -412,6 +439,7 @@ img { display: block; max-width: 100%; }
   .core-onecut-block { margin-top:16px; }
   .haruten-spotlight { padding:18px; }
   .haruten-spotlight .haruten-media { padding:0; }
+  .side-nav { display:none; }
 }
 
 @media (max-width: 760px) {
@@ -467,7 +495,6 @@ img { display: block; max-width: 100%; }
   .race-tags { justify-content:flex-start; }
 }
 
-
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
@@ -509,42 +536,6 @@ img { display: block; max-width: 100%; }
     animation: none;
   }
 }
-
-
-.nav {
-  position: fixed;
-  top: 50%;
-  right: 14px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  z-index: 100;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.12);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s;
-  padding: 0;
-}
-
-.dot:hover,
-.dot.on {
-  background: linear-gradient(135deg, var(--gold-main), var(--gold-sub));
-  transform: scale(1.6);
-}
-
-@media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
-}
-
 
 .side-nav {
   position: fixed;
@@ -600,10 +591,4 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(135deg, var(--gold-main), var(--gold-sub));
   transform: scale(1.7);
   box-shadow: 0 0 0 6px rgba(224,210,61,0.10);
-}
-
-@media (max-width: 768px) {
-  .side-nav {
-    display: none;
-  }
 }
