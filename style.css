@@ -542,6 +542,7 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 760px) {
+  .side-nav { display: none; }
   .grid-4 { grid-template-columns:1fr; }
   .compare-block { padding:24px; }
   .compare-head h3 { font-size:28px; line-height:1.15; }
