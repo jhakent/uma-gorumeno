@@ -334,6 +334,90 @@ img { display: block; max-width: 100%; }
 .compare-topic.common .compare-topic-side { padding-top:22px; }
 .compare-topic.common .compare-topic-vs { font-size:30px; letter-spacing:0; font-weight:800; }
 
+/* 1컷 만화 */
+.onecut-block {
+  margin-top: 26px;
+  display: grid;
+  gap: 14px;
+}
+
+.core-onecut-block {
+  margin-top: 20px;
+}
+
+.onecut-card {
+  padding: 20px 20px 18px;
+  border: 1px solid rgba(87,74,119,.16);
+  border-radius: 28px;
+  background: linear-gradient(180deg,rgba(87,74,119,.03),rgba(255,255,255,.9));
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.onecut-kicker {
+  font-size: 12px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #7f7894;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.onecut-title {
+  font-size: 24px;
+  line-height: 1.18;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  color: #231f2a;
+  margin: 0 0 14px;
+}
+
+.onecut-media {
+  width: 100%;
+  max-width: 640px;
+  margin-inline: auto;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(87,74,119,.12);
+  background: #fff;
+}
+
+.onecut-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fenomeno-quote {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  margin: 14px auto 0;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: linear-gradient(180deg,rgba(87,74,119,.08),rgba(255,255,255,.94));
+  border: 1px solid rgba(87,74,119,.14);
+  color: var(--feno-main);
+  max-width: 680px;
+}
+
+.fenomeno-quote .quote-main {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.fenomeno-quote .quote-sfx.top {
+  font-size: 15px;
+  justify-self: start;
+}
+
+.fenomeno-quote .quote-sfx.bottom {
+  font-size: 14px;
+  justify-self: end;
+}
+
 /* 하루텐: 기본은 세로, PC에서만 2단 */
 .haruten-spotlight {
   margin-top: 16px;
