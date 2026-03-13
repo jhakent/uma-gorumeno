@@ -331,31 +331,45 @@ img { display: block; max-width: 100%; }
 .compare-topic.common .compare-topic-side.feno .compare-bullets li:nth-child(odd)::before,
 .compare-topic.common .compare-topic-side.feno .compare-bullets li:nth-child(even)::before { background:var(--feno-sub); box-shadow:0 0 0 4px rgba(234,220,104,.12); }
 .compare-topic.common .compare-topic-name { display:inline-flex; align-items:center; min-height:2.25rem; padding:.34rem .92rem; border-radius:999px; font-size:.9rem; font-weight:800; letter-spacing:-.01em; color:#6b6471; background:rgba(255,255,255,.92); border:1px solid rgba(43,41,48,.10); box-shadow:0 4px 14px rgba(25,18,22,.04); margin-bottom:14px; }
-.compare-topic.common .compare-bullets { font-weight:400; }
 .compare-topic.common .compare-topic-side { padding-top:22px; }
 .compare-topic.common .compare-topic-vs { font-size:30px; letter-spacing:0; font-weight:800; }
 
-.onecut-block { margin-top:26px; display:grid; gap:14px; }
-.core-onecut-block { margin-top:20px; }
-.fenomeno-quote { position:relative; display:grid; gap:10px; margin:14px auto 0; padding:18px 20px; border-radius:22px; background:linear-gradient(180deg,rgba(87,74,119,.08),rgba(255,255,255,.94)); border:1px solid rgba(87,74,119,.14); color:var(--feno-main); max-width:680px; }
-.fenomeno-quote::before { content:none; }
-.fenomeno-quote .quote-main { margin:0; font-size:20px; line-height:1.5; font-weight:900; letter-spacing:-.02em; color:var(--feno-main); }
-.fenomeno-quote .quote-sfx { font-style:italic; font-weight:800; letter-spacing:.02em; color:#7a6c9d; opacity:.96; }
-.fenomeno-quote .quote-sfx.top { font-size:15px; justify-self:start; }
-.fenomeno-quote .quote-sfx.bottom { font-size:14px; justify-self:end; }
-.onecut-card { padding:20px 20px 18px; border:1px solid rgba(87,74,119,.16); border-radius:28px; background:linear-gradient(180deg,rgba(87,74,119,.03),rgba(255,255,255,.9)); max-width:960px; margin-inline:auto; }
-.onecut-kicker { font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#7f7894; font-weight:700; margin-bottom:10px; }
-.onecut-title { font-size:24px; line-height:1.18; font-weight:800; letter-spacing:-.03em; color:#231f2a; margin:0 0 14px; }
-.onecut-media { width:100%; max-width:640px; margin-inline:auto; border-radius:22px; overflow:hidden; border:1px solid rgba(87,74,119,.12); background:#fff; }
-.onecut-media img { display:block; width:100%; height:auto; }
-
-.haruten-spotlight { margin-top:16px; padding:26px; }
-.haruten-media { border-radius:22px; overflow:hidden; min-height:100%; border:1px solid rgba(0,0,0,0.06); }
-.haruten-spotlight .haruten-media { width:100%; max-width:640px; margin:18px auto 0; min-height:auto; background:none; padding:0; aspect-ratio:3/4; border-radius:22px; border:1px solid rgba(0,0,0,0.06); }
-.haruten-media img { display:block; width:100%; height:100%; object-fit:contain; }
-.haruten-spotlight .haruten-media img { display:block; width:100%; height:100%; object-fit:cover; }
-.haruten-copy h3 { margin-top:10px; font-size:22px; font-weight:900; line-height:1.2; letter-spacing:-0.04em; }
-.haruten-copy p { margin-top:12px; font-size:15px; line-height:1.78; color:var(--text-dim); }
+/* 하루텐: 기본은 세로, PC에서만 2단 */
+.haruten-spotlight {
+  margin-top: 16px;
+  padding: 26px;
+}
+.haruten-media {
+  width: 100%;
+  max-width: 640px;
+  margin: 18px auto 0;
+  min-height: auto;
+  padding: 0;
+  aspect-ratio: 3 / 4;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: none;
+}
+.haruten-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.haruten-copy h3 {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+.haruten-copy p {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.78;
+  color: var(--text-dim);
+}
 
 .clan-box { margin-top:22px; padding:28px; }
 .clan-box h3 { font-size:24px; font-weight:900; letter-spacing:-0.045em; line-height:1.18; text-wrap:balance; }
@@ -377,26 +391,26 @@ img { display: block; max-width: 100%; }
 @media (min-width: 901px) {
   .haruten-spotlight {
     display: grid;
-    grid-template-columns: minmax(320px, 440px) minmax(0, 1fr);
-    gap: 28px;
-    align-items: center;
+    grid-template-columns: 380px minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
   }
 
-  .haruten-spotlight .haruten-media {
-    width: 100%;
-    max-width: 440px;
+  .haruten-media {
+    max-width: 380px;
     margin: 0;
   }
 
-  .haruten-spotlight .haruten-copy {
+  .haruten-copy {
     min-width: 0;
+    padding-top: 4px;
   }
 
-  .haruten-spotlight .haruten-copy h3 {
+  .haruten-copy h3 {
     margin-top: 6px;
   }
 
-  .haruten-spotlight .haruten-copy p {
+  .haruten-copy p {
     margin-top: 14px;
   }
 }
@@ -438,7 +452,6 @@ img { display: block; max-width: 100%; }
   .fenomeno-quote .quote-sfx.bottom { font-size:12px; }
   .core-onecut-block { margin-top:16px; }
   .haruten-spotlight { padding:18px; }
-  .haruten-spotlight .haruten-media { padding:0; }
   .side-nav { display:none; }
 }
 
