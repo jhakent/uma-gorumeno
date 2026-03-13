@@ -696,12 +696,34 @@ img { display: block; max-width: 100%; }
     font-size: 18px;
     margin: 0 0 10px;
   }
-  .onecut-media, .fenomeno-quote { max-width:none; }
-  .fenomeno-quote { padding:14px 15px; gap:8px; }
-  .fenomeno-quote .quote-main { font-size:16px; line-height:1.58; }
-  .fenomeno-quote .quote-sfx.top { font-size:13px; }
-  .fenomeno-quote .quote-sfx.bottom { font-size:12px; }
-  .core-onecut-block { margin-top:16px; }
+
+  .onecut-media,
+  .fenomeno-quote {
+    max-width: none;
+  }
+
+  .fenomeno-quote {
+    padding: 14px 15px;
+    gap: 8px;
+  }
+
+  .fenomeno-quote .quote-main {
+    font-size: 16px;
+    line-height: 1.58;
+  }
+
+  .fenomeno-quote .quote-sfx.top {
+    font-size: 13px;
+  }
+
+  .fenomeno-quote .quote-sfx.bottom {
+    font-size: 12px;
+  }
+
+  .core-onecut-block {
+    margin-top: 16px;
+  }
+  
   .haruten-spotlight { padding:18px; }
   .grid-4 { grid-template-columns:1fr; }
   .compare-block { padding:24px; }
