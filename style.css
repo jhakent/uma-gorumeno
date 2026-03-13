@@ -731,6 +731,11 @@ img { display: block; max-width: 100%; }
     border-radius:20px;
   }
 
+  .clan-item p {
+    font-size: 12px;
+    line-height: 1.56;
+  }
+
   .clan-thumb {
     width:86px;
     border-radius:16px;
