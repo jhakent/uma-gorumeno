@@ -515,7 +515,7 @@ img { display: block; max-width: 100%; }
 .clan-body { min-width:0; }
 
 .clan-item h4 { font-size:18px; font-weight:900; letter-spacing:-0.03em; line-height:1.25; color:var(--main); }
-.clan-item p { margin-top:8px; font-size:13px; line-height:1.62; color:var(--text-dim); }
+.clan-item p { margin-top:8px; font-size:13px; line-height:1.64; color:var(--text-dim); }
 
 .clan-item .clan-sub {
   display:inline-block;
@@ -739,7 +739,7 @@ img { display: block; max-width: 100%; }
   .clan-item h4 { font-size:17px; }
   .clan-item p {
     font-size: 12px;
-    line-height: 1.56;
+    line-height: 1.6;
   }
 }
 
