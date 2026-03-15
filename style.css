@@ -519,11 +519,14 @@ img { display: block; max-width: 100%; }
   object-fit: cover;
 }
 .haruten-copy h3 {
-  margin-top: 10px;
+  margin-top: 4px;
   font-size: 22px;
   font-weight: 900;
   line-height: 1.2;
   letter-spacing: -0.04em;
+}
+.haruten-copy .compare-label {
+  margin-bottom: 4px;
 }
 .haruten-copy p {
   margin-top: 12px;
@@ -688,11 +691,11 @@ img { display: block; max-width: 100%; }
 
   .haruten-copy {
     min-width: 0;
-    padding-top: 4px;
+    padding-top: 0;
   }
 
   .haruten-copy h3 {
-    margin-top: 6px;
+    margin-top: 2px;
   }
 
   .haruten-copy p {
