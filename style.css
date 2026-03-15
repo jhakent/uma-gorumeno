@@ -290,12 +290,17 @@ img { display: block; max-width: 100%; }
 .story-step { display: inline-flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 999px; background: rgba(0,0,0,0.03); font-family: 'Cormorant Garamond', serif; font-size: 12px; font-weight: 400; letter-spacing: 0.14em; color: var(--text-soft); text-transform: uppercase; }
 .story-card h3 { margin-top: 16px; }
 
-.timeline { display: grid; gap: 10px; }
-.race { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 18px; align-items: start; }
-.race-year { border-radius: 0; border: none; box-shadow: none; background: transparent; padding: 18px 0 0; display: inline-flex; align-items: center; gap: 8px; font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); line-height: 1; }
-.race-year::before { content:''; width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12); transform: translateY(0.5px); }
-.race-year.gold::before { background: linear-gradient(135deg, var(--gold-main), #e85f6a); }
-.race-year.feno::before { background: linear-gradient(135deg, var(--feno-main), #7a68a6); }
+.timeline { display: grid; gap: 10px; position: relative; }
+.race { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 18px; align-items: start; position: relative; }
+.race-year { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 18px 0 0; font-family: 'Outfit', sans-serif; position: relative; z-index: 1; width: 52px; }
+.race-dot { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px rgba(0,0,0,0.08); position: relative; z-index: 2; }
+.race-year.gold .race-dot { background: linear-gradient(135deg, var(--gold-main), #e85f6a); box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px rgba(218,60,87,0.15); }
+.race-year.feno .race-dot { background: linear-gradient(135deg, var(--feno-main), #7a68a6); box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px rgba(87,74,119,0.15); }
+.race-y { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); line-height: 1; margin-top: 6px; }
+.race-date { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--text-soft); line-height: 1; }
+.race::after { content: ''; position: absolute; left: 25px; top: 48px; bottom: -10px; width: 1px; background: rgba(0,0,0,0.08); z-index: 0; }
+.race:last-of-type::after { display: none; }
+/* race colors handled by .race-dot */
 .race-card { border-radius: 20px; border: 1px solid var(--border); background: rgba(255,255,255,0.94); padding: 22px 24px; box-shadow: var(--shadow); }
 .race-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
 .race-name { font-size: 20px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.2; text-wrap: balance; }
@@ -791,8 +796,11 @@ img { display: block; max-width: 100%; }
   .clan-grid { grid-template-columns:1fr; }
   .profile-side h3 { font-size:24px; }
   .race { grid-template-columns:auto minmax(0,1fr); gap:14px; }
-  .race-year { justify-self:start; padding:16px 0 0; font-size:13px; gap:6px; }
-  .race-year::before { width:10px; height:10px; transform:translateY(0.5px); }
+  .race-year { padding:16px 0 0; width:44px; gap:3px; }
+  .race-dot { width:10px; height:10px; }
+  .race-y { font-size:13px; margin-top:5px; }
+  .race-date { font-size:9px; }
+  .race::after { left:21px; top:42px; }
   .race-name { font-size:18px; line-height:1.3; }
   .race-head { flex-direction:column; }
   .race-tags { justify-content:flex-start; }
