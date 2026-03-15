@@ -40,6 +40,16 @@ img { display: block; max-width: 100%; }
   margin: 0 auto;
 }
 
+.scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold-main), var(--gold-sub), var(--feno-sub), var(--feno-main));
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
+
 .hero { padding: 82px 0 54px; }
 .hero-grid {
   display: grid;
