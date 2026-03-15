@@ -326,9 +326,6 @@ img { display: block; max-width: 100%; }
 }
 
 .note-box p {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
   margin: 0;
   font-size: 14px;
   line-height: 1.8;
@@ -336,9 +333,8 @@ img { display: block; max-width: 100%; }
 }
 
 .note-label {
-  display: inline-block;
-  flex: 0 0 auto;
-  margin-right: 0;
+  display: block;
+  margin-bottom: 6px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 11px;
   font-weight: 400;
@@ -507,7 +503,7 @@ img { display: block; max-width: 100%; }
 .haruten-media {
   width: 100%;
   max-width: 640px;
-  margin: 18px auto 0;
+  margin: 0 auto;
   min-height: auto;
   padding: 0;
   aspect-ratio: 3 / 4;
