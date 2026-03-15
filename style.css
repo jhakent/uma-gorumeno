@@ -296,10 +296,16 @@ img { display: block; max-width: 100%; }
 .race-dot { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px rgba(0,0,0,0.08); position: relative; z-index: 2; }
 .race-year.gold .race-dot { background: linear-gradient(135deg, var(--gold-main), #e85f6a); box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px rgba(218,60,87,0.15); }
 .race-year.feno .race-dot { background: linear-gradient(135deg, var(--feno-main), #7a68a6); box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px rgba(87,74,119,0.15); }
-.race-y { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); line-height: 1; margin-top: 6px; }
+.race-y { font-size: 16px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); line-height: 1; margin-top: 6px; }
 .race-date { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--text-soft); line-height: 1; }
-.race::after { content: ''; position: absolute; left: 25px; top: 48px; bottom: -10px; width: 1px; background: rgba(0,0,0,0.08); z-index: 0; }
+.race::after { content: ''; position: absolute; left: 25px; top: 68px; bottom: -10px; width: 1px; background: rgba(0,0,0,0.08); z-index: 0; }
 .race:last-of-type::after { display: none; }
+.race-interlude { align-items: stretch; }
+.race-year-line { width: 52px; position: relative; flex-shrink: 0; }
+.race-year-line::after { content: ''; position: absolute; left: 25px; top: 0; bottom: 0; width: 1px; background: rgba(0,0,0,0.08); }
+.race-interlude::after { display: none; }
+.race-interlude .note-box { margin-top: 0; }
+.race-interlude .haruten-spotlight { margin-top: 0; }
 /* race colors handled by .race-dot */
 .race-card { border-radius: 20px; border: 1px solid var(--border); background: rgba(255,255,255,0.94); padding: 22px 24px; box-shadow: var(--shadow); }
 .race-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
@@ -798,9 +804,13 @@ img { display: block; max-width: 100%; }
   .race { grid-template-columns:auto minmax(0,1fr); gap:14px; }
   .race-year { padding:16px 0 0; width:44px; gap:3px; }
   .race-dot { width:10px; height:10px; }
-  .race-y { font-size:13px; margin-top:5px; }
+  .race-y { font-size:14px; margin-top:5px; }
   .race-date { font-size:9px; }
-  .race::after { left:21px; top:42px; }
+  .race::after { left:21px; top:58px; }
+  .race-year-line { width:44px; }
+  .race-year-line::after { left:21px; }
+  .race-interlude .haruten-spotlight { padding:18px; }
+  .race-interlude .haruten-copy h3 { font-size:18px; }
   .race-name { font-size:18px; line-height:1.3; }
   .race-head { flex-direction:column; }
   .race-tags { justify-content:flex-start; }
