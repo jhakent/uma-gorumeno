@@ -298,7 +298,7 @@ img { display: block; max-width: 100%; }
 .race-year.feno .race-dot { background: linear-gradient(135deg, var(--feno-main), #7a68a6); box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px rgba(87,74,119,0.15); }
 .race-y { font-size: 16px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); line-height: 1; margin-top: 6px; }
 .race-date { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--text-soft); line-height: 1; }
-.race::after { content: ''; position: absolute; left: 25px; top: 68px; bottom: -10px; width: 1px; background: rgba(0,0,0,0.08); z-index: 0; }
+.race::after { content: ''; position: absolute; left: 25px; top: 80px; bottom: -10px; width: 1px; background: rgba(0,0,0,0.08); z-index: 0; }
 .race:last-of-type::after { display: none; }
 .race-interlude { align-items: stretch; }
 .race-year-line { width: 52px; position: relative; flex-shrink: 0; }
@@ -806,7 +806,7 @@ img { display: block; max-width: 100%; }
   .race-dot { width:10px; height:10px; }
   .race-y { font-size:14px; margin-top:5px; }
   .race-date { font-size:9px; }
-  .race::after { left:21px; top:58px; }
+  .race::after { left:21px; top:68px; }
   .race-year-line { width:44px; }
   .race-year-line::after { left:21px; }
   .race-interlude .haruten-spotlight { padding:18px; }
