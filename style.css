@@ -122,7 +122,7 @@ img { display: block; max-width: 100%; }
 .hero-sub { margin-top: 12px; color: var(--text-dim); text-align: center; }
 .hero-sub.jp { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; }
 .hero-sub.en-line { font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
-.cp-note {
+.cp- {
   margin: 12px auto 0;
   display: inline-flex;
   align-items: center;
@@ -140,9 +140,9 @@ img { display: block; max-width: 100%; }
   color: var(--text-dim);
   white-space: nowrap;
 }
-.cp-note .sep { opacity: 0.45; }
+.cp- .sep { opacity: 0.45; }
 .mobile-only-break { display: none; }
-.hero-footnote { width: min(100%, 560px); margin: 12px auto 0; font-size: 12px; color: var(--text-soft); line-height: 1.7; }
+.hero-foot { width: min(100%, 560px); margin: 12px auto 0; font-size: 12px; color: var(--text-soft); line-height: 1.7; }
 .hero-desc { width: min(100%, 560px); margin: 24px auto 0; font-size: 15px; font-weight: 400; color: var(--text-dim); }
 .hero-meta { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 
@@ -317,9 +317,35 @@ img { display: block; max-width: 100%; }
 .result-chip.feno { background: linear-gradient(135deg, var(--feno-main), #78609f); }
 .race-copy { margin-top: 14px; font-size: 15px; line-height: 1.8; color: var(--text-dim); }
 
-.note-box { margin-top: 16px; padding: 18px 20px; border-radius: 18px; background: linear-gradient(135deg, rgba(224,210,61,0.08), rgba(87,74,119,0.05)); border: 1px solid rgba(0,0,0,0.06); }
-.note-box p { margin: 0; font-size: 14px; line-height: 1.8; color: var(--text-dim); }
-.note-label { display: inline-block; margin-right: 8px; font-family: 'Cormorant Garamond', serif; font-size: 11px; font-weight: 400; letter-spacing: 0.14em; color: var(--text-soft); text-transform: uppercase; }
+.note-box {
+  margin-top: 16px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(224,210,61,0.08), rgba(87,74,119,0.05));
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.note-box p {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-dim);
+}
+
+.note-label {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin-right: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: var(--text-soft);
+  text-transform: uppercase;
+}
 
 .reason-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .reason-card { min-height: 186px; }
